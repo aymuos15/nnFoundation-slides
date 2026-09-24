@@ -1,0 +1,35 @@
+i pos neg name
+0 20.0 nan {AutoPETIV Task 2}
+1 14.1 nan {HCC-TACE-MRI}
+2 6.4 nan {DeepPSMA FDG}
+3 6.2 nan {MSD Colon}
+4 4.0 nan {ToothFairy}
+5 3.5 nan {Panther Task 2}
+6 3.3 nan {MSD Pancreas}
+7 2.8 nan {MSD Prostate}
+8 2.4 nan {WORD}
+9 1.9 nan {Mama Mia}
+10 1.6 nan {MSD Liver}
+11 1.1 nan {M\&Ms challenge}
+12 1.0 nan {ISLES2022}
+13 0.9 nan {WMHSegChallenge}
+14 0.9 nan {Rider Lung}
+15 0.8 nan {HCC-TACE-Seg}
+16 0.7 nan {MSD Spleen}
+17 0.7 nan {HaNSeg}
+18 0.6 nan {ACDC}
+19 0.5 nan {BraTS2024 Pediatric}
+20 0.4 nan {DeepPSMA PSMA}
+21 0.3 nan {MSD Heart}
+22 0.2 nan {MU-Glioma-Post}
+23 0.2 nan {MSD Hippocampus}
+24 0.1 nan {MSD Hepatic Vessel}
+25 0.0 nan {Pengwin}
+26 nan -0.2 {Stanford Knee}
+27 nan -0.2 {HNTSMRG24}
+28 nan -0.3 {Covid-19-20}
+29 nan -0.3 {BraTS2024 Glioma}
+30 nan -0.4 {MSD Brain}
+31 nan -0.5 {MS Ljubljana}
+32 nan -1.8 {Panther Task 1}
+33 nan -4.0 {MSD Lung}
