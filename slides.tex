@@ -90,7 +90,7 @@
 \toprule
  & Network & Starting weights \\
 \midrule
-\sw{unet}nnU-Net Default & standard nnU-Net U-Net & random \\
+\sw{unet}nnU-Net Default & not stated (cites original nnU-Net) & random \\
 \sw{cnnS}From scratch & ResEnc-L or Primus & random \\
 \sw{cnn}Pretrained & ResEnc-L or Primus & MAE-pretrained encoder \\
  & & (2.1M unlabeled scans) \\
@@ -617,9 +617,10 @@ Detection, boxes (Deformable DETR) & \textcolor{cnn}{\best{yes}} \\
 Instance segmentation & \textcolor{unet}{no} \\
 MedNeXt baseline & \textcolor{unet}{no} \\
 STU-Net baseline & \textcolor{unet}{no} \\
-nnU-Net ResEnc-L baseline & \textcolor{unet}{no} \\
+nnU-Net ResEnc-L baseline & \textcolor{cnn}{as CNN scratch} \\
 Scale / modality ablations & \textcolor{unet}{no} \\
 nnU-Net baseline in low-data experiments & \textcolor{unet}{no} \\
+Architecture of ``nnU-Net Default'' & \textcolor{unet}{no} \\
 \bottomrule
 \end{tabular}
 \end{frame}
@@ -658,6 +659,7 @@ CURIA in-dist.\ Dice / retention & 71.7 / 87.5\% & 73.7 / 85.1\% \\
 Merlin in-dist.\ Dice / retention & 81.4 / 86.7\% & 82.9 / 85.1\% \\
 ``NoMask'' loss & masked voxels only & whole volume (nnssl code) \\
 CNN scratch at 1,000 epochs & 70.4 (Fig.\ 2) & 68.3, fixed topology (F26) \\
+MSD Pancreas 63.7 & ``ResEnc-L from scratch'' & Default and scratch both (F13) \\
 \bottomrule
 \end{tabular}}
 \end{frame}
