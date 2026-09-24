@@ -83,6 +83,24 @@
 \end{frame}}
 
 % ------------------------------------------------------------------
+\begin{frame}{Default, from scratch, pretrained}
+\vskip14pt
+{\small
+\begin{tabular}{@{}l l l@{}}
+\toprule
+ & Network & Starting weights \\
+\midrule
+\sw{unet}nnU-Net Default & standard nnU-Net U-Net & random \\
+\sw{cnnS}From scratch & ResEnc-L or Primus & random \\
+\sw{cnn}Pretrained & ResEnc-L or Primus & MAE-pretrained encoder \\
+ & & (2.1M unlabeled scans) \\
+\midrule
+All three & \multicolumn{2}{l}{then trained on the same labeled data} \\
+\bottomrule
+\end{tabular}}
+\end{frame}
+
+% ------------------------------------------------------------------
 \begin{frame}{Two models, one recipe}
 \vskip14pt
 \begin{tabular}{@{}l l r l r@{}}
@@ -447,6 +465,28 @@ SwinUNETR & 26.3 & 36.6 & 87.9 & 72.1 & 81.6 & 22.6 \\
 \end{frame}
 
 % ------------------------------------------------------------------
+\begin{frame}{Low-data: the six datasets}
+\vskip10pt
+{\footnotesize\setlength{\tabcolsep}{6pt}
+\begin{tabular}{@{}l l l r r r r@{}}
+\toprule
+ & & & \multicolumn{4}{c}{$\Delta$ Dice vs scratch} \\
+\cmidrule(l){4-7}
+Dataset & Scan and target & Dev set & 10 cases & 20 & 40 & 100 \\
+\midrule
+Mama Mia & MRI, breast tumour & no & +6.1 & +4.3 & +4.5 & +1.7 \\
+CTSpine1K & CT, vertebrae & no & +2.4 & +6.8 & +3.7 & \best{+7.3} \\
+HNTSMRG24 & MRI, head \& neck tumour & no & \textcolor{unet!80!ink}{$-$2.2} & \textcolor{unet!80!ink}{$-$1.8} & \textcolor{unet!80!ink}{$-$0.5} & \textcolor{unet!80!ink}{$-$0.3} \\
+KiTS & CT, kidney tumour & yes & \best{+6.7} & +4.0 & +2.5 & +1.0 \\
+AMOS & CT + MRI, abdomen organs & yes & +2.1 & +1.0 & +0.7 & +0.3 \\
+BraTS 2024 Glioma & MRI, brain tumour & no & +2.8 & +2.9 & +2.8 & +2.7 \\
+\midrule
+\sw{cnn}Mean & & & +3.0 & +2.9 & +2.3 & +2.1 \\
+\bottomrule
+\end{tabular}}
+\end{frame}
+
+% ------------------------------------------------------------------
 \begin{frame}{Out of distribution}
 \vskip0pt
 \centering
@@ -579,6 +619,7 @@ MedNeXt baseline & \textcolor{unet}{no} \\
 STU-Net baseline & \textcolor{unet}{no} \\
 nnU-Net ResEnc-L baseline & \textcolor{unet}{no} \\
 Scale / modality ablations & \textcolor{unet}{no} \\
+nnU-Net baseline in low-data experiments & \textcolor{unet}{no} \\
 \bottomrule
 \end{tabular}
 \end{frame}
