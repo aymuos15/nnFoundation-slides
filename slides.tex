@@ -582,6 +582,26 @@ Scale / modality ablations & \textcolor{unet}{no} \\
 \end{tabular}
 \end{frame}
 % ------------------------------------------------------------------
+\begin{frame}{No instance-level evaluation}
+\vskip10pt
+{\small
+\begin{tabular}{@{}l r l@{}}
+\toprule
+Searched in paper and supplement & Mentions & Where \\
+\midrule
+Panoptic quality (PQ) & \best{0} & -- \\
+Instance segmentation & \best{0} & only in a cited title (RibFrac, ref.\ 84) \\
+Lesion-wise / per-lesion metrics & \best{0} & -- \\
+Object-level F1 & \best{0} & F1 appears only for report labels \\
+Connected components & 1 & retrieval crop preprocessing \\
+\midrule
+Segmentation metrics used & & Dice, NSD (voxel-level, per class) \\
+Detection metrics used & & mAP, FROC, AP@IoU 0.10 (boxes) \\
+\bottomrule
+\end{tabular}}
+\end{frame}
+
+% ------------------------------------------------------------------
 \begin{frame}{Where text and tables disagree}
 \vskip10pt
 {\footnotesize\setlength{\tabcolsep}{5pt}
